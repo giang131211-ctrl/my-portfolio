@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio của tôi</title>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+nav {
+    background: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.page { display: none; }
+.active { display: block; }
+
+header {
+    text-align: center;
+    padding: 4rem;
+    background: #333;
+    color: white;
+}
+
+section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.project {
+    background: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <a onclick="showPage('home')">Trang chủ</a>
+    <a onclick="showPage('about')">Giới thiệu</a>
+    <a onclick="showPage('contact')">Liên hệ</a>
+</nav>
+
+<!-- Trang chủ -->
+<div id="home" class="page active">
+    <header>
+        <h1>Xin chào! Mình là Nguyễn Trường Giang</h1>
+        <p>Web Developer tương lai</p>
+    </header>
+
+    <section>
+        <h2>Dự án nổi bật</h2>
+        <div class="project">Todo List JS</div>
+        <div class="project">Weather App</div>
+        <div class="project">Portfolio này :)</div>
+    </section>
+</div>
+
+<!-- Giới thiệu -->
+<div id="about" class="page">
+    <section>
+        <h1>Giới thiệu</h1>
+        <img src="E:\Giang\z7673130123848_d81ae5b4f9c31cbe5d03d2e52155f8a5.jpg">
+        <p>Tôi là Nguyễn Trường Giang.</p>
+    </section>
+</div>
+
+<!-- Liên hệ -->
+<div id="contact" class="page">
+    <section>
+        <h1>Liên hệ</h1>
+        <p>Email: giang131211@gmail.com</p>
+    </section>
+</div>
+
+<script>
+function showPage(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(page).classList.add('active');
+}
+
+alert("Chào mừng bạn đến với website!");
+</script>
+
+</body>
+</html>
